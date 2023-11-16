@@ -28,8 +28,7 @@ Brief description of the project.
 
 Install the dependencies:
 
-    ```bash
-    npm install
+    ```npm install
 
  
 ## Usage
