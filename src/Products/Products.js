@@ -4,11 +4,15 @@ import { useParams } from "react-router-dom";
 import AxiosInstance from "../Axios Instance/AxiosInstance";
 
 const Products = () => {
+  // Extracting categoryId from route parameters
   const { categoryId } = useParams();
+  
+  // State for products, selected products, and total cost
   const [products, setProducts] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
 
+  // Fetch products based on categoryId when categoryId changes
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -24,6 +28,7 @@ const Products = () => {
     fetchProducts();
   }, [categoryId]);
 
+  // Add a product to the cart
   const addToCart = (product) => {
     setSelectedProducts((prevSelectedProducts) => [
       ...prevSelectedProducts,
@@ -31,8 +36,8 @@ const Products = () => {
     ]);
   };
 
+  // Update total cost whenever selectedProducts change
   useEffect(() => {
-    // Calculate the total cost whenever the selectedProducts array changes
     let total = 0;
     selectedProducts.forEach((product) => {
       total += product.avgBudget;
@@ -42,7 +47,8 @@ const Products = () => {
 
   return (
     <>
-      <div className="container" style={{}}>
+      <div className="container">
+        {/* Display the total cost */}
         <Row>
           <Col
             style={{
@@ -57,22 +63,12 @@ const Products = () => {
           </Col>
         </Row>
 
-        <Row
-          xs={1}
-          md={2}
-          className="g-4"
-          style={{ textAlign: "left", padding: "20px", marginLeft: "200px" }}
-        >
+        {/* Display products */}
+        <Row xs={1} md={2} className="g-4" style={{ textAlign: "left", padding: "20px", marginLeft: "200px" }}>
           {products.map((product) => (
             <Col key={product.id}>
-              <Card
-                className="border border-light rounded-3 shadow-sm"
-                style={{
-                  width: "18rem",
-                  height: "auto",
-                  textAlign: "center",
-                }}
-              >
+              <Card className="border border-light rounded-3 shadow-sm" style={{ width: "18rem", height: "auto", textAlign: "center" }}>
+                {/* Product image */}
                 <Image
                   src={`${product.image}`}
                   alt=""
@@ -89,17 +85,16 @@ const Products = () => {
                   }}
                 />
               </Card>
+
+              {/* Product title */}
               <Card.Body>{product.title}</Card.Body>
-              <Card.Body
-                className="budget"
-                style={{
-                  color: "lightGray",
-                  fontSize: "14px",
-                  textAlign: "inherit",
-                }}
-              >
+
+              {/* Budget range */}
+              <Card.Body className="budget" style={{ color: "lightGray", fontSize: "14px", textAlign: "inherit" }}>
                 {product.minBudget}$~{product.maxBudget}$
               </Card.Body>
+
+              {/* Button to add the product to the cart */}
               <Button variant="success" onClick={() => addToCart(product)}>
                 Add to Cart
               </Button>{" "}
