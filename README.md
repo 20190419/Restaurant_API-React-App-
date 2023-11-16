@@ -28,27 +28,27 @@ Brief description of the project.
 
 Install the dependencies:
 
-```bash
-npm install
+    ```bash
+    npm install
 
-### Usage
-# Start the development server:
-
-npm start
+## Usage
+### Start the development server:
+    ```bash
+    npm start
 
 The app will be running at http://localhost:3000.
 
-Build the app for production:
+## Build the app for production:
 
-```bash
-npm run build
+    ```bash
+    npm run build
 
 The production-ready build will be generated in the build folder.
 
-Contributing
+## Contributing
 Contributions are welcome! Please follow the guidelines outlined in CONTRIBUTING.md.
 
-License
+## License
 This project is licensed under the License Name.
 
 
