@@ -30,8 +30,8 @@ Install the dependencies:
 
 npm install
 
-###Usage
-#Start the development server:
+### Usage
+# Start the development server:
 
 npm start
 
