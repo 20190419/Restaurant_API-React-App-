@@ -20,12 +20,6 @@ Brief description of the project.
 
 ### Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone <repository_url>
-
-
 Install the dependencies:
 
     npm install
