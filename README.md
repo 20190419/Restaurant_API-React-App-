@@ -31,10 +31,12 @@ Install the dependencies:
     ```bash
     npm install
 
+ 
 ## Usage
 ### Start the development server:
     ```bash
     npm start
+
 
 The app will be running at http://localhost:3000.
 
