@@ -1,0 +1,40 @@
+/* Add these styles to your CSS file or a styled-components file */
+
+/* Animation for Navbar links*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to Navbar links */
+.nav-link {
+    font-size: 17px;
+    font-weight: 600;
+    size: 50px;
+    align-self: start;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Animation for Navbar background */
+@keyframes fadeInBackground {
+    from {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    to {
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/* Apply animation to Navbar background */
+.bg-body-tertiary {
+    animation: fadeInBackground 0.5s ease-in-out;
+}
