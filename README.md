@@ -28,6 +28,7 @@ Brief description of the project.
 
 Install the dependencies:
 
+```bash
 npm install
 
 ### Usage
@@ -39,6 +40,7 @@ The app will be running at http://localhost:3000.
 
 Build the app for production:
 
+```bash
 npm run build
 
 The production-ready build will be generated in the build folder.
