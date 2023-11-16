@@ -28,12 +28,11 @@ Brief description of the project.
 
 Install the dependencies:
 
-    ```npm install
+    npm install
 
  
 ## Usage
 ### Start the development server:
-    ```bash
     npm start
 
 
@@ -41,7 +40,6 @@ The app will be running at http://localhost:3000.
 
 ## Build the app for production:
 
-    ```bash
     npm run build
 
 The production-ready build will be generated in the build folder.
